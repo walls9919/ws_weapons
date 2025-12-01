@@ -78,7 +78,7 @@ cfg.Weapons = {
 
     --SHOTGUNS
     [GetHashKey('WEAPON_PUMPSHOTGUN')] = {recoil = 3.5, shake = 1.0, damage = 0.20},
-    [GetHashKey('WEAPON_COMBATSHOTGUN')] = {recoil = 3.5, shake = 1.0, damage = 0.25)},
+    [GetHashKey('WEAPON_COMBATSHOTGUN')] = {recoil = 3.5, shake = 1.0, damage = 0.25},
     [GetHashKey('WEAPON_PUMPSHOTGUN_MK2')] = {recoil = 3.5, shake = 1.0, damage = 0.20},
     [GetHashKey('WEAPON_SAWNOFFSHOTGUN')] = {recoil = 3.5, shake = 1.0, damage = 0.15},
     [GetHashKey('WEAPON_ASSAULTSHOTGUN')] = {recoil = 3.5, shake = 1.0, damage = 0.17},
