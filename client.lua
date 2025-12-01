@@ -1,3 +1,12 @@
+-- Disable headshots
+CreateThread(function()
+    while true do
+        Wait(5)
+        SetPedSuffersCriticalHits(PlayerPedId(-1), cfg.Headshots)
+    end
+    
+end)
+-- Recoil + damage
 CreateThread(function()
     while true do
         Wait(0)
@@ -32,7 +41,7 @@ CreateThread(function()
                 local recoil = data.recoil or 0.0
                 local shake = data.shake or 0.0
 
-                ShakeGameplayCam("FPS_MELEE_HIT_SHAKE", shake)
+                ShakeGameplayCam("FPS_MELEE_HIT_SHAKE", shake)  --https://docs.fivem.net/natives/?_0xFD55E49555E017CF
 
                 Wait(0)
                 local p = GetGameplayCamRelativePitch()
