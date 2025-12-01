@@ -110,9 +110,5 @@ cfg.Weapons = {
     --MISC (You can remove)
     [GetHashKey('WEAPON_FERTILIZERCAN')] = {recoil = 0.0, shake = 0.00, damage = 0.10},
     [GetHashKey('WEAPON_PETROLCAN')] = {recoil = 0.0, shake = 0.00, damage = 0.10},
-    [GetHashKey('WEAPON_HAZARDCAN')] = {recoil = 0.0, shake = 0.00, damage = 0.10},
-
-
-
-    [GetHashKey('WEAPON_COMPACTLAUNCHER')] = {recoil = 0.5, shake = 0.05, damage = 0.00} -- no damage
+    [GetHashKey('WEAPON_HAZARDCAN')] = {recoil = 0.0, shake = 0.00, damage = 0.10}
 }
