@@ -3,7 +3,7 @@ game 'gta5'
 
 description 'Weapon modifier'
 author 'Walls'
-version '1.0.0'
+version '1.0.1'
 
 shared_scripts {
     'config.lua'
