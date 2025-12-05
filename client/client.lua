@@ -30,9 +30,9 @@ end)
 CreateThread(function()
     while true do
         Wait(0)
-        local ped = PlayerPedId()
 
-        if IsPedShooting(ped) then
+        local ped = PlayerPedId()
+        if IsPedShooting(ped) and not IsPedDoingDriveby(ped) then
 
             local weapon = GetSelectedPedWeapon(ped)
             local data = cfg.Weapons[weapon]
@@ -41,12 +41,20 @@ CreateThread(function()
                 local recoil = data.recoil or 0.0
                 local shake = data.shake or 0.0
 
-                ShakeGameplayCam("FPS_MELEE_HIT_SHAKE", shake)  --https://docs.fivem.net/natives/?_0xFD55E49555E017CF
+                ShakeGameplayCam("FPS_MELEE_HIT_SHAKE", shake) -- https://docs.fivem.net/natives/?_0xFD55E49555E017CF
 
-                Wait(0)
-                local p = GetGameplayCamRelativePitch()
-                if GetFollowPedCamViewMode() ~= 4 then
-                    SetGameplayCamRelativePitch(p+0.1, 0.2)
+                if recoil ~= 0 then
+                    local tv = 0.0
+                    repeat
+                        Wait(0)
+                        local p = GetGameplayCamRelativePitch()
+
+                        if GetFollowPedCamViewMode() ~= 4 then
+                            SetGameplayCamRelativePitch(p + 0.1, 0.2)
+                        end
+
+                        tv = tv + 0.1
+                    until tv >= recoil
                 end
             end
         end
